@@ -13,7 +13,7 @@ pipeline {
                 def scannerHome = tool 'SonarQube';
                     withSonarQubeEnv('SonarQube') {
                     sh "/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/SonarQube/bin/sonar-scanner -Dsonar.projectKey=OWASP -
-                    Dsonar.sources=.
+                    Dsonar.sources=."
                     }
                 }
             }
